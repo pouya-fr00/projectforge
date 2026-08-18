@@ -2,12 +2,13 @@
 
 ## Supported Versions
 
-Project Factory is currently **unpublished** (pre-release). No public releases exist yet.
-Once a release is published, this section will document which versions receive security updates.
+ProjectForge is publicly released. The current public release line is **0.1.x**
+(the initial public release is **v0.1.0**).
 
-| Version | Supported          |
-| ------- | ------------------ |
-| 0.0.0   | Pre-release only   |
+| Version | Supported                          |
+| ------- | ---------------------------------- |
+| 0.1.x   | Yes — current public release line  |
+| < 0.1.0 | No — unreleased development builds |
 
 ## Reporting a Vulnerability
 
@@ -17,7 +18,7 @@ To report a vulnerability, email
 **[pooya.fr2005@gmail.com](mailto:pooya.fr2005@gmail.com)**.
 This address is controlled and monitored by the project owner.
 
-**STATUS: OPERATIONAL** — the private vulnerability reporting channel is active.
+**STATUS: OPERATIONAL** — the email reporting channel is active.
 
 ## Responsible Disclosure
 
@@ -28,7 +29,7 @@ This address is controlled and monitored by the project owner.
 ## Scope
 
 Security reports should concern:
-- The Project Factory CLI tool itself
+- The ProjectForge CLI tool itself
 - The standalone CLI artifact (`.tgz`)
 - Generated project templates produced by the tool
 - The bundled module registry distributed with the tool

@@ -1,7 +1,15 @@
-# Contributing to Project Factory
+# Contributing to ProjectForge
 
-Project Factory is currently **unpublished** (pre-release). Contributions are managed
-within a local, private workflow until a public release occurs.
+ProjectForge v0.1.0 is publicly released on GitHub, and contributions are welcome.
+
+## First-time contribution flow
+
+1. Fork the repository
+2. Create a focused branch
+3. Make the change
+4. Run the required validation
+5. Push to your fork
+6. Open a Pull Request against `main`
 
 ## Local Setup
 
