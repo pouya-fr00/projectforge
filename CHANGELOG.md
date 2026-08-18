@@ -90,7 +90,7 @@ Release scope: GitHub-only. No npm package publication planned.
 
 - Diff-based `sync` and module uninstall are not yet implemented.
 - The registry is bundled with the CLI; no external registry service exists.
-- This is a pre-release — generated output and APIs may change before v1.0.0.
+- This is an early pre-1.0 release — generated output and APIs may change before v1.0.0.
 
 ---
 

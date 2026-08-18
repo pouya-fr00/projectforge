@@ -36,7 +36,7 @@ ProjectForge lets you scaffold a complete application — React frontend, Hono A
 ## Quick Start
 
 ```bash
-# From the standalone tarball (v0.1.0 — upcoming):
+# From the standalone v0.1.0 GitHub Release tarball:
 npm install ./projectforge-cli-0.1.0.tgz
 npx projectforge create my-app
 cd my-app
@@ -154,12 +154,12 @@ The source repository includes over 260 tests across 6 packages covering schemas
 
 ---
 
-## Known Limitations (Pre-release)
+## Known Limitations (v0.1.0)
 
 - Migrations are not executed by the CLI; generated projects include a D1 migration workflow via Wrangler
 - Diff-based `sync` and module uninstall are not yet implemented
 - The registry is bundled with the CLI; no external registry service exists
-- This is a pre-release — APIs and generated output may change before v1.0.0
+- This is an early pre-1.0 release — APIs and generated output may change before v1.0.0
 
 ---
 
