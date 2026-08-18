@@ -1,0 +1,13 @@
+{
+  "$schema": "../../schemas/starter.schema.json",
+  "schemaVersion": 1,
+  "id": "react-vite-hono-cloudflare",
+  "version": "0.1.0",
+  "displayName": "React + Vite + Hono + Cloudflare",
+  "engine": ">=0.1.0 <0.2.0",
+  "packageManager": "pnpm",
+  "capabilities": [],
+  "files": [],
+  "generatedSlots": [],
+  "verification": []
+}

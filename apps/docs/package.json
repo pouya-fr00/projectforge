@@ -1,0 +1,19 @@
+{
+  "name": "@projectforge/docs",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Project Factory documentation site.",
+  "scripts": {
+    "dev": "vitepress dev .",
+    "build": "vitepress build .",
+    "preview": "vitepress preview .",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "test": "vitepress build . --outDir ../../coverage/docs"
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.1",
+    "typescript": "^5.7.2",
+    "vitepress": "^1.6.3"
+  }
+}

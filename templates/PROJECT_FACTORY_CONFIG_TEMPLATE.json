@@ -1,0 +1,10 @@
+{
+  "$schema": "https://example.invalid/project-factory/project.schema.json",
+  "schemaVersion": 1,
+  "starter": "react-vite-hono-cloudflare",
+  "modules": ["database-d1", "auth", "rbac", "user-dashboard", "admin-dashboard"],
+  "options": {
+    "languages": ["en", "fa"],
+    "defaultLanguage": "en"
+  }
+}

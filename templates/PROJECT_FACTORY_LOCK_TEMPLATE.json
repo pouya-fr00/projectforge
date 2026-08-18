@@ -1,0 +1,10 @@
+{
+  "schemaVersion": 1,
+  "engine": {"version": "0.1.0"},
+  "starter": {"id": "react-vite-hono-cloudflare", "version": "0.1.0", "integrity": ""},
+  "modules": {},
+  "files": {},
+  "generated": {},
+  "packages": {},
+  "lastTransaction": null
+}

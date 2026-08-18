@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "id": "rbac",
+  "version": "0.1.0",
+  "displayName": "Role-Based Access Control",
+  "description": "Roles and permissions backed by D1 and enforced via the Better Auth session.",
+  "engine": ">=0.1.0",
+  "starters": [],
+  "requires": [
+    "auth"
+  ],
+  "conflicts": [],
+  "capabilities": [],
+  "files": [
+    "apps/api/src/features/rbac/middleware.ts",
+    "apps/api/src/features/rbac/index.ts",
+    "apps/api/src/features/rbac/index.test.ts",
+    "apps/api/src/features/rbac/seed.ts",
+    "packages/contracts/src/rbac.ts",
+    "packages/contracts/src/rbac.test.ts",
+    "migrations/0003_rbac.sql"
+  ],
+  "generatedContributions": [
+    "apps/api/src/features/rbac/",
+    "packages/contracts/src/rbac.ts"
+  ],
+  "packages": [
+    "better-auth",
+    "drizzle-orm"
+  ],
+  "devPackages": [],
+  "environment": [],
+  "migrations": [
+    "migrations/0003_rbac.sql"
+  ],
+  "verification": [],
+  "routeContributions": [
+    {
+      "path": "/api/admin",
+      "import": "./rbac/index.js"
+    }
+  ],
+  "webRouteContributions": [],
+  "documentation": "docs/MODULES.md"
+}

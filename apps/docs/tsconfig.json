@@ -1,0 +1,10 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "noEmit": true,
+    "tsBuildInfoFile": "./.tsbuildinfo",
+    "allowJs": true
+  },
+  "include": [".vitepress/config.mjs"],
+  "exclude": ["node_modules", ".vitepress/cache", ".vitepress/dist"]
+}

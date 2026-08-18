@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "id": "database-d1",
+  "version": "0.1.0",
+  "displayName": "Cloudflare D1 Database",
+  "description": "D1 binding, typed query helpers, local sqlite migration runner, and migration scaffolding.",
+  "engine": ">=0.1.0",
+  "starters": [],
+  "requires": [],
+  "conflicts": [],
+  "capabilities": [],
+  "files": [
+    "apps/api/src/db/schema.ts",
+    "apps/api/src/db/index.ts",
+    "apps/api/src/features/database/index.ts",
+    "apps/api/src/features/database/index.test.ts",
+    "packages/contracts/src/db.ts",
+    "packages/contracts/src/db.test.ts",
+    "migrations/runner.mjs",
+    "migrations/0001_db_init.sql"
+  ],
+  "generatedContributions": [
+    "apps/api/src/db/",
+    "apps/api/src/features/database/",
+    "packages/contracts/src/db.ts",
+    "migrations/"
+  ],
+  "packages": [
+    "drizzle-orm"
+  ],
+  "devPackages": [
+    "drizzle-kit"
+  ],
+  "environment": [
+    "DATABASE_URL"
+  ],
+  "migrations": [
+    "migrations/0001_db_init.sql"
+  ],
+  "verification": [],
+  "routeContributions": [
+    {
+      "path": "/database",
+      "import": "./database/index.js"
+    }
+  ],
+  "webRouteContributions": [],
+  "documentation": "docs/MODULES.md"
+}

@@ -1,0 +1,23 @@
+{
+  "name": "@workspace/test-utils",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "exports": {
+    ".": { "default": "./src/index.ts", "types": "./src/index.ts" },
+    "./d1-mock": { "default": "./src/d1-mock.ts", "types": "./src/d1-mock.ts" }
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.12",
+    "@types/node": "^22.0.0",
+    "better-sqlite3": "^11.0.0",
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.0"
+  }
+}

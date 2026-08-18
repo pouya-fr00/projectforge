@@ -1,0 +1,19 @@
+/**
+ * Stable error codes for the engine.
+ */
+
+export { ProjectFactoryError } from '@projectforge/schemas';
+import { PathErrorCodes } from '@projectforge/schemas';
+
+export const EngineErrors = {
+  MODULE_NOT_FOUND: 'PF_MODULE_NOT_FOUND',
+  INCOMPATIBLE_VERSION: 'PF_INCOMPATIBLE_VERSION',
+  PROJECT_LOCKED: 'PF_PROJECT_LOCKED',
+  CYCLIC_DEPENDENCY: 'PF_CYCLIC_DEPENDENCY',
+  MODULE_CONFLICT: 'PF_MODULE_CONFLICT',
+  DUPLICATE_MODULE: 'PF_DUPLICATE_MODULE',
+  DUPLICATE_MIGRATION: 'PF_DUPLICATE_MIGRATION',
+  USER_MODIFIED_MANAGED_FILE: 'PF_USER_MODIFIED_MANAGED_FILE',
+  PATH_ESCAPE: PathErrorCodes.PATH_ESCAPE,
+  INVALID_PATH: PathErrorCodes.INVALID_PATH,
+} as const;

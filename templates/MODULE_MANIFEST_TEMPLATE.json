@@ -1,0 +1,20 @@
+{
+  "$schema": "../../schemas/module.schema.json",
+  "schemaVersion": 1,
+  "id": "example-module",
+  "version": "0.1.0",
+  "displayName": "Example module",
+  "description": "",
+  "engine": ">=0.1.0 <0.2.0",
+  "starters": ["react-vite-hono-cloudflare"],
+  "requires": [],
+  "conflicts": [],
+  "capabilities": [],
+  "files": [],
+  "generatedContributions": [],
+  "packages": [],
+  "environment": [],
+  "migrations": [],
+  "verification": [],
+  "documentation": "docs/README.md"
+}

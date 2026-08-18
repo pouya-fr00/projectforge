@@ -1,0 +1,28 @@
+{
+  "name": "projectforge-root",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Project Factory — local-first CLI and module system for opinionated full-stack TypeScript projects.",
+  "license": "MIT",
+  "author": "Pouya Fereydouni",
+  "type": "module",
+  "engines": {
+    "node": ">=24.0.0"
+  },
+  "packageManager": "pnpm@11.10.0",
+  "scripts": {
+    "build": "pnpm -r build",
+    "test": "pnpm -r test",
+    "lint": "eslint .",
+    "format": "prettier --write \"**/*.{ts,mjs,cjs,json,md,yml}\"",
+    "typecheck": "pnpm -r typecheck"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "eslint": "^9.0.0",
+    "prettier": "^3.0.0",
+    "typescript": "^5.7.2",
+    "typescript-eslint": "^8.0.0",
+    "vitest": "^4.1.10"
+  }
+}

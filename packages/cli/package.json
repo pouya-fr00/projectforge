@@ -1,0 +1,41 @@
+{
+  "name": "@projectforge/cli",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Project Factory command-line interface.",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "bin": {
+    "projectforge": "./bin/projectforge.js"
+  },
+  "exports": {
+    ".": {
+      "development": {
+        "types": "./src/index.ts",
+        "default": "./src/index.ts"
+      },
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json && node ./scripts/bundle-registry.mjs && node ./scripts/bundle-deps.mjs",
+    "pack:standalone": "node ./scripts/pack-standalone.mjs",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "test": "vitest run"
+  },
+  "files": [
+    "dist/",
+    "bin/"
+  ],
+  "dependencies": {
+    "@projectforge/engine": "workspace:*",
+    "@projectforge/registry": "workspace:*",
+    "@projectforge/schemas": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.1",
+    "typescript": "^5.7.2"
+  }
+}

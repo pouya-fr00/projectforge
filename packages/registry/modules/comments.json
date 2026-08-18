@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "id": "comments",
+  "version": "0.1.0",
+  "displayName": "Comments",
+  "description": "Authenticated comment model with create/list/edit/delete-own foundation, validation, pagination, and tests.",
+  "engine": ">=0.1.0",
+  "starters": [],
+  "requires": [
+    "auth",
+    "database-d1"
+  ],
+  "conflicts": [],
+  "capabilities": [],
+  "files": [
+    "apps/api/src/features/comments/index.ts",
+    "apps/api/src/features/comments/index.test.ts",
+    "apps/web/src/features/comments/index.tsx",
+    "apps/web/src/features/comments/index.test.tsx",
+    "migrations/0002_comments_init.sql"
+  ],
+  "generatedContributions": [
+    "apps/api/src/features/comments/",
+    "migrations/0002_comments_init.sql"
+  ],
+  "packages": [
+    "react-router-dom",
+    "better-auth",
+    "drizzle-orm"
+  ],
+  "devPackages": [],
+  "environment": [],
+  "migrations": [
+    "migrations/0002_comments_init.sql"
+  ],
+  "verification": [],
+  "routeContributions": [
+    {
+      "path": "/api/comments",
+      "import": "./comments/index.js"
+    }
+  ],
+  "webRouteContributions": [
+    {
+      "path": "/comments",
+      "import": "./comments/index"
+    }
+  ],
+  "documentation": "docs/MODULES.md"
+}

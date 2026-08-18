@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "id": "admin-dashboard",
+  "version": "0.1.0",
+  "displayName": "Admin Dashboard",
+  "description": "View users and their roles.",
+  "engine": ">=0.1.0",
+  "starters": [],
+  "requires": [
+    "rbac"
+  ],
+  "conflicts": [],
+  "capabilities": [],
+  "files": [
+    "apps/web/src/features/admin/index.tsx",
+    "apps/web/src/features/admin/index.test.tsx"
+  ],
+  "generatedContributions": [
+    "apps/web/src/features/admin/"
+  ],
+  "packages": [
+    "react-router-dom"
+  ],
+  "devPackages": [],
+  "environment": [],
+  "migrations": [],
+  "verification": [],
+  "routeContributions": [],
+  "webRouteContributions": [
+    {
+      "path": "/admin",
+      "import": "./admin/index"
+    }
+  ],
+  "documentation": "docs/MODULES.md"
+}

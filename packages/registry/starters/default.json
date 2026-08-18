@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "id": "default",
+  "version": "0.1.0",
+  "displayName": "Golden Stack Starter",
+  "description": "A full-stack TypeScript monorepo with React/Vite web app, Hono/Cloudflare API, shared packages, Vitest, and Playwright foundation.",
+  "compatibility": {
+    "engine": ">=0.1.0",
+    "node": ">=24.0.0"
+  },
+  "templateDir": "template",
+  "files": [],
+  "templateOperations": [],
+  "verificationCommands": [
+    "pnpm run typecheck",
+    "pnpm run test",
+    "pnpm run build"
+  ],
+  "generatedOwnership": {
+    "factoryGenerated": [
+      "package.json",
+      "pnpm-workspace.yaml",
+      "tsconfig.json",
+      "apps/**",
+      "packages/**",
+      ".github/workflows/ci.yml",
+      ".project-factory/**",
+      "docs/ARCHITECTURE.md",
+      "docs/MODULES.md"
+    ],
+    "features": [
+      "apps/web/src/features/**",
+      "apps/api/src/features/**"
+    ],
+    "extensions": [
+      "extensions/**"
+    ]
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "id": "user-dashboard",
+  "version": "0.1.0",
+  "displayName": "User Dashboard",
+  "description": "View your account information.",
+  "engine": ">=0.1.0",
+  "starters": [],
+  "requires": [
+    "auth"
+  ],
+  "conflicts": [],
+  "capabilities": [],
+  "files": [
+    "apps/web/src/features/dashboard/index.tsx",
+    "apps/web/src/features/dashboard/index.test.tsx"
+  ],
+  "generatedContributions": [
+    "apps/web/src/features/dashboard/"
+  ],
+  "packages": [
+    "react-router-dom"
+  ],
+  "devPackages": [],
+  "environment": [],
+  "migrations": [],
+  "verification": [],
+  "routeContributions": [],
+  "webRouteContributions": [
+    {
+      "path": "/dashboard",
+      "import": "./dashboard/index"
+    }
+  ],
+  "documentation": "docs/MODULES.md"
+}

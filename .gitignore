@@ -1,0 +1,16 @@
+node_modules/
+.pnpm-store/
+.DS_Store
+Thumbs.db
+.env
+.env.*
+!.env.example
+research/phase-zero/tmp/
+*.log
+*.zip
+dist/
+build/
+coverage/
+*.tsbuildinfo
+/.cleanroom
+packages/cli/projectforge-cli-0.0.0.tgz
