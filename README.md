@@ -1,10 +1,10 @@
 # ProjectForge
 
-**Local-first CLI that generates production-ready full-stack TypeScript projects from composable modules.**
+**Local-first CLI that generates modular full-stack TypeScript starter projects.**
 
 > **Status:** v0.1.0 released on GitHub (2026-08-18). The npm package is NOT published.
 
-ProjectForge lets you scaffold a complete application — React frontend, Hono API, Cloudflare D1 database, shared packages — and then extend it by adding modules. Comments, user dashboards, admin panels with RBAC, authentication... each module is a tested, composable piece. Add them with a single command. Never scaffold boilerplate by hand again.
+ProjectForge scaffolds a React frontend, Hono API, Cloudflare D1 configuration, and shared packages. You can add modules for features such as comments, user dashboards, authentication, and role-based access control. Review and adapt the generated project for your own requirements before deployment.
 
 ---
 
@@ -12,8 +12,8 @@ ProjectForge lets you scaffold a complete application — React frontend, Hono A
 
 - A CLI that **generates** projects from a starter template
 - A **module system** — `projectforge add comments` installs a feature with its routes, tests, database migrations, and dependencies
-- **Deterministic** — same inputs always produce the same project, verified by SHA256 provenance
-- **Transactional** — every mutation is executed under backup, verification, and rollback
+- **Tracked changes** — the engine records SHA256 provenance for managed files
+- **File transaction** — planned file changes use backups, verification, and rollback on failure; package-manager side effects and database migrations have separate limits described in [Known Issues](docs/KNOWN_ISSUES.md)
 - **Local only** — no cloud account, no telemetry, no central service
 
 ## What It Is Not
@@ -35,8 +35,10 @@ ProjectForge lets you scaffold a complete application — React frontend, Hono A
 
 ## Quick Start
 
+Use the [official v0.1.0 GitHub release](https://github.com/pouya-fr00/projectforge/releases/tag/v0.1.0) to download the [standalone CLI tarball](https://github.com/pouya-fr00/projectforge/releases/download/v0.1.0/projectforge-cli-0.1.0.tgz). A [SHA-256 checksum file](https://github.com/pouya-fr00/projectforge/releases/download/v0.1.0/projectforge-cli-0.1.0.tgz.sha256) is also available. The package is not published on npm. For this repository's documented toolchain, use Node.js 24 or newer and pnpm 11.10.0.
+
 ```bash
-# From the standalone v0.1.0 GitHub Release tarball:
+# After downloading the standalone v0.1.0 tarball:
 npm install ./projectforge-cli-0.1.0.tgz
 npx projectforge create my-app
 cd my-app
@@ -131,16 +133,16 @@ pnpm -r build
 pnpm -r test
 ```
 
-The source repository includes over 260 tests across 6 packages covering schemas, the planning engine, registry loading, and CLI integration tests including installed-artifact, all-modules, rollback, and provenance verification.
+The source repository includes tests for schemas, planning, registry loading, and CLI integration, including installed-artifact, module-composition, rollback, and provenance checks.
 
 ---
 
 ## Requirements
 
-- **Node.js** ≥ 18
-- **pnpm** ≥ 9
+- **Node.js** ≥ 24 (declared in the root `package.json`)
+- **pnpm** 11.10.0 (declared by the root `packageManager` field and used in CI)
 - **Cloudflare Wrangler** (for local D1 development)
-- **Windows, macOS, or Linux** — tested on all three
+- **Platform evidence:** CI runs on Ubuntu Linux. Windows and macOS are not verified by the current CI; see the [requirements guide](apps/docs/start/requirements.md) for the scope of this statement.
 
 ---
 
@@ -158,6 +160,7 @@ The source repository includes over 260 tests across 6 packages covering schemas
 
 - Migrations are not executed by the CLI; generated projects include a D1 migration workflow via Wrangler
 - Diff-based `sync` and module uninstall are not yet implemented
+- Rollback of package-manager side effects and database migrations is not guaranteed; see [Known Issues](docs/KNOWN_ISSUES.md)
 - The registry is bundled with the CLI; no external registry service exists
 - This is an early pre-1.0 release — APIs and generated output may change before v1.0.0
 

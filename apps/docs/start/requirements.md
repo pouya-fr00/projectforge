@@ -2,20 +2,17 @@
 
 ## Operating System
 
-- **Windows 10+** (x64)
-- **Linux** (x64, glibc 2.28+)
-
-macOS support is planned for a future release.
+The repository CI runs on Ubuntu Linux. This is the platform verified by the current CI configuration. Windows troubleshooting guidance is available, but the current CI does not verify Windows or macOS. Do not treat either platform as tested for this release without a separate run.
 
 ## Runtime
 
 | Tool | Version |
 |------|---------|
-| Node.js | 20.x or 22.x |
-| pnpm | 9.x or 10.x |
-| Git | 2.40+ |
+| Node.js | 24 or newer, as declared by the root `package.json` |
+| pnpm | 11.10.0, as declared by the root `packageManager` field and used in CI |
+| Git | Required to clone the source; no minimum version is declared by this repository |
 
-npm and yarn are also supported, but pnpm is the default for generated projects.
+The standalone GitHub release is installed from a local tarball with npm in the Quick Start. The source repository uses pnpm. Compatibility with other Node.js or pnpm versions is not established by the current CI configuration.
 
 ## Optional
 
@@ -25,7 +22,7 @@ npm and yarn are also supported, but pnpm is the default for generated projects.
 ## Verify your environment
 
 ```bash
-node --version   # must be >= 20.0.0
-pnpm --version   # must be >= 9.0.0
-git --version    # must be >= 2.40.0
+node --version   # use 24 or newer for the source repository
+pnpm --version   # use 11.10.0 for the source repository
+git --version
 ```

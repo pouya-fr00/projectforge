@@ -1,23 +1,18 @@
 # Known Issues
 
-## Phase 9 — Release blockers
+## Third-party license note
 
 - **drizzle-orm@0.45.2 is Apache-2.0** (not MIT). The package does not ship a LICENSE or NOTICE file. Since ProjectForge does not redistribute drizzle-orm code, Apache-2.0 notice obligations fall on the consumer. This is documented in `docs/THIRD_PARTY_LICENSES.md`.
 
-## Open before Phase 0 approval
+## Current limitations (v0.1.0)
 
-- Final public name and package scope are not selected. **Recommendation:** `projectforge` (see ADR-004).
-- Exact GitHub repository path depends on the owner's GitHub username and must be confirmed before Phase 1.
-- Docs framework final choice awaits Phase 1 (VitePress, Starlight, or plain markdown under `apps/docs`).
 - Automatic uninstall is out of V1 scope.
 - Automatic merge of customized files during upgrades is out of V1 scope.
 - Perfect rollback of every external package-manager side effect is not guaranteed; recovery behavior is documented as best-effort.
 
-## Open before Phase 6
+## Additional known limitations
 
-- `apps/docs` has no tests or content yet.
 - `validateSemVer` accepts only exact versions or `>=X <Y` ranges; caret/tilde ranges are not supported.
-- The CLI reads the local registry from `PROJECTFORGE_REGISTRY` or the current working directory; a bundled registry is not yet shipped.
 - Package-manager rollback is best-effort; side effects left in `node_modules`/lockfiles may require manual cleanup.
 - `projectforge add` and `projectforge sync` do not yet diff the existing lock against the requested modules or uninstall removed modules.
 - Only one starter (`default`) is currently registered; additional starters and modules require new registry entries.
@@ -31,6 +26,12 @@
   - **Integration contract:** modules may list migration runner commands in their `verification` array. Example convention: `{"verification": ["node migrations/runner.mjs"] }`. The executor runs these after file/package operations and treats a non-zero exit as `PF_VERIFICATION_FAILED`, rolling back the transaction. This covers migration failures that are expressible as verification commands.
   - **Limitation:** the executor does not yet diff or track applied migrations, automatically rerun them, or provide migration-specific rollback. Target phase: data-layer/operations phase after V1.
   - **Known edge:** if `fs.rm(backupPath)` repeatedly fails during rollback, stale `.backup-*` files may accumulate. This is best-effort cleanup; failed removals are not surfaced outside the recovery report. Target phase: hardened cleanup pass in data-layer/operations phase.
+
+## Superseded planning notes
+
+- The public repository and name are now `pouya-fr00/projectforge` and ProjectForge.
+- `apps/docs` contains documentation pages and uses VitePress (`apps/docs/package.json`); its build script is the documentation test. This does not establish that every page is current.
+- The v0.1.0 CLI release includes a bundled registry. The `PROJECTFORGE_REGISTRY` setting can still select a local registry path.
 
 ## Resolved during Phase 5 provenance/integrity slice
 
