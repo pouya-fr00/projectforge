@@ -1,3 +1,3 @@
 # Project Factory Documentation Site
 
-Skeleton for the static documentation site. Final framework choice (VitePress, Starlight, or plain markdown) is deferred to Phase 7.
+The documentation site uses VitePress. Its pages live in `apps/docs/`, and the package defines local development, build, and preview commands.
