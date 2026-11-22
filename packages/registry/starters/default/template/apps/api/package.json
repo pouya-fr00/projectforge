@@ -17,7 +17,7 @@
     "@workspace/test-utils": "workspace:*",
     "drizzle-kit": "^0.30.0",
     "typescript": "^5.7.2",
-    "vitest": "^2.1.0",
+    "vitest": "^4.1.12",
     "wrangler": "^3.62.0"
   }
 }
