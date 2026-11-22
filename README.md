@@ -1,10 +1,15 @@
 # ProjectForge
 
+[![CI](https://github.com/pouya-fr00/projectforge/actions/workflows/ci.yml/badge.svg)](https://github.com/pouya-fr00/projectforge/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-8b93ff.svg)](LICENSE)
+
 **Local-first CLI that generates modular full-stack TypeScript starter projects.**
 
-> **Status:** v0.1.0 released on GitHub (2026-08-18). The npm package is NOT published.
+> **Status:** v0.1.0 is available as a GitHub release. The package is not published on npm.
 
 ProjectForge scaffolds a React frontend, Hono API, Cloudflare D1 configuration, and shared packages. You can add modules for features such as comments, user dashboards, authentication, and role-based access control. Review and adapt the generated project for your own requirements before deployment.
+
+Designed and built by [Pouya Fereydouni](https://github.com/pouya-fr00) as a developer-tools portfolio project.
 
 ---
 
@@ -180,7 +185,5 @@ The source repository includes tests for schemas, planning, registry loading, an
 MIT — see [LICENSE](LICENSE) for details.
 
 ---
-
-*ProjectForge v0.1.0 is released on GitHub (2026-08-18). The npm package is NOT published.*
 
 *Created and maintained by Pouya Fereydouni.*
